@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mainactivtity_login_linearlayout_width">300dp</dimen>
+    <dimen name="mainactivtity_login_linearlayout_height">400dp</dimen>
+     <dimen name="mainactivtity_login_linearlayout_editText_paddingLeft">10dp</dimen>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="dataSource"
+            type="databinding.test.vishesh.com.databinding_practice1.Fragments.FragSecondDataSource" />
+    </data>
+
+    <databinding.test.vishesh.com.databinding_practice1.CustomViews.MyCustView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="@layout/activity_second"
+        tools:context="databinding.test.vishesh.com.databinding_practice1.CustomViews.MyCustView">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{dataSource.textView_messages}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{dataSource.clickMe_button}" />
+
+    </databinding.test.vishesh.com.databinding_practice1.CustomViews.MyCustView>
+</layout>

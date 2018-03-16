@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+  <data>
+      <variable
+          name="mainActivityDataSource"
+          type="databinding.test.vishesh.com.databinding_practice1.MainActivity_Files.MainActivityDataSource"/>
+  </data>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="databinding.test.vishesh.com.databinding_practice1.MainActivity">
+    tools:context="databinding.test.vishesh.com.databinding_practice1.MainActivity_Files.MainActivity">
 
 
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="400dp"
+        android:layout_width="@dimen/mainactivtity_login_linearlayout_width"
+        android:layout_height="@dimen/mainactivtity_login_linearlayout_width"
         android:orientation="vertical"
         android:layout_centerInParent="true">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:text="Email"/>
+        android:paddingLeft="@dimen/mainactivtity_login_linearlayout_editText_paddingLeft"
+        android:text="@{mainActivityDataSource.emailTextView}"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Email"/>
+        android:hint="@{mainActivityDataSource.emailHintEditText}"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:text="Password"/>
+            android:paddingLeft="@dimen/mainactivtity_login_linearlayout_editText_paddingLeft"
+            android:text="@{mainActivityDataSource.passwordTextView}"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter PassWord"/>
+            android:hint="@{mainActivityDataSource.passwordHintEditext}"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log In"/>
+            android:text="@{mainActivityDataSource.submitButtonText}"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="moveToSecond"
+            android:text="@{mainActivityDataSource.moveToSecond}"/>
 
 
     </LinearLayout>
 
 
 </RelativeLayout>
+</layout>

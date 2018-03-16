@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DataBinding_Practice1</string>
+
+    <string name="special">Special: %s</string>
+    <string name="price">Price %s</string>
+    <string-array name="sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
 </resources>
