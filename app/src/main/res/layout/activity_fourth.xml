@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="myData"
+            type="databinding.test.vishesh.com.databinding_practice1.FourthAcivity_Files.Fourth_Act_Data" />
+
+        <variable
+            name="buttonListeners"
+            type="databinding.test.vishesh.com.databinding_practice1.MyNewHandler" />
+
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="databinding.test.vishesh.com.databinding_practice1.FourthAcivity_Files.FourthActivity">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setMyTextData="@{myData.mytext}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:setNumberText="@{myData.valueNumber}" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{buttonListeners::OnClickMe}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> buttonListeners.pleaseClickMe(myData)}" />
+
+        <Button
+            android:onClick="moveToFifth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOVE TO FIFTH"/>
+
+    </LinearLayout>
+</layout>

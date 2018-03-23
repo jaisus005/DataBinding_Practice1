@@ -20,6 +20,12 @@
         android:layout_margin="10dp"
         android:text="@{dataSource.title}"/>
 
+    <Button
+        android:onClick="moveToFourth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Move to Fourth Activity"/>
+
 <android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_height="match_parent"

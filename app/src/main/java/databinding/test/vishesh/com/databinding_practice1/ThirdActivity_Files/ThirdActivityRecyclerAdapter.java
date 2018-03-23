@@ -7,10 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import databinding.test.vishesh.com.databinding_practice1.Fragments.FragSecondDataSource;
 import databinding.test.vishesh.com.databinding_practice1.Others.MenuItem;
 import databinding.test.vishesh.com.databinding_practice1.databinding.ExpressionsBinding;
-import databinding.test.vishesh.com.databinding_practice1.databinding.IncludeSecondFragmentBinding;
 
 /**
  * Created by JaiSuS on 3/16/2018.
@@ -21,8 +19,8 @@ class ThirdActivityRecyclerAdapter extends RecyclerView.Adapter<ThirdActivityRec
     private LayoutInflater layoutInflater;
     Context context;
 
-    ThirdActivityRecyclerAdapter(Context context){
-    this.context=context;
+    ThirdActivityRecyclerAdapter(Context context) {
+        this.context = context;
 
     }
 
@@ -30,16 +28,16 @@ class ThirdActivityRecyclerAdapter extends RecyclerView.Adapter<ThirdActivityRec
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        ExpressionsBinding inSecBind=ExpressionsBinding.inflate(LayoutInflater.from(context),parent,false);
+        ExpressionsBinding inSecBind = ExpressionsBinding.inflate(LayoutInflater.from(context), parent, false);
 
         return new MyViewHolder(inSecBind.getRoot());
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        MenuItem menuItem=new MenuItem(false,"vanilla","102",0);
-       // IncludeSecondFragmentBinding binding= DataBindingUtil.getBinding(holder.itemView);
-        ExpressionsBinding binding=DataBindingUtil.getBinding(holder.itemView);
+        MenuItem menuItem = new MenuItem(false, "vanilla", "102", 0);
+        // IncludeSecondFragmentBinding binding= DataBindingUtil.getBinding(holder.itemView);
+        ExpressionsBinding binding = DataBindingUtil.getBinding(holder.itemView);
         binding.setItem(menuItem);
     }
 
@@ -47,8 +45,9 @@ class ThirdActivityRecyclerAdapter extends RecyclerView.Adapter<ThirdActivityRec
     public int getItemCount() {
         return 10;
     }
+    
 
-    class  MyViewHolder extends RecyclerView.ViewHolder{
+    class MyViewHolder extends RecyclerView.ViewHolder {
 
         public MyViewHolder(View itemView) {
             super(itemView);

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="databinding.test.vishesh.com.databinding_practice1.FifthActivity_Files.FifthActivity.ViewModel"/>
+        <variable
+            name="listeners"
+            type="databinding.test.vishesh.com.databinding_practice1.FifthActivity_Files.FifthActivity"/>
+    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/room"
+    android:background="@{viewModel.IsOn ? @color/bulb_on : @color/bulb_off}"
+    tools:context="databinding.test.vishesh.com.databinding_practice1.FifthActivity_Files.FifthActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/bulb"
+        android:src="@{viewModel.IsOn ? @drawable/bulb_on : @drawable/bulb_off}"
+        />
+
+    <Switch
+        android:id="@+id/bulb_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onCheckedChanged="@{listeners.onCheckChanged}"
+        android:text="Bulb Switch"/>
+</LinearLayout>
+</layout>

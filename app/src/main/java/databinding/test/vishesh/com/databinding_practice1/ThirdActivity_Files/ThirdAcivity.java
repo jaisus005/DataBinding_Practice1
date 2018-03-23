@@ -1,10 +1,13 @@
 package databinding.test.vishesh.com.databinding_practice1.ThirdActivity_Files;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
 
+import databinding.test.vishesh.com.databinding_practice1.FourthAcivity_Files.FourthActivity;
 import databinding.test.vishesh.com.databinding_practice1.R;
 import databinding.test.vishesh.com.databinding_practice1.databinding.ActivityThirdAcivityBinding;
 
@@ -24,5 +27,8 @@ public class ThirdAcivity extends AppCompatActivity {
 
     }
 
+    public void moveToFourth(View view){
+        startActivity(new Intent(this, FourthActivity.class));
+    }
 
 }
